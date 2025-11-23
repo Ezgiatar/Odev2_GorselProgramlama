@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2_GorselProgramlama.VKIPage"
+             Title="Vücut Kitle İndeksi ⚖️"
+             BackgroundColor="#f5f7fa"> <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style x:Key="InputHeader" TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <Frame Padding="15" CornerRadius="15" BackgroundColor="White" HasShadow="True" BorderColor="#dddddd">
+                <VerticalStackLayout Spacing="15">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Kilonuz (KG):" Style="{StaticResource InputHeader}" Grid.Column="0"/>
+                        <Label x:Name="KiloLabel"
+                               Text="70 KG"
+                               TextColor="#1976D2"
+                               Grid.Column="1"
+                               FontSize="20" FontAttributes="Bold"/>
+                    </Grid>
+
+                    <Slider x:Name="KiloSlider"
+                            Minimum="30"
+                            Maximum="200"
+                            Value="70"
+                            MinimumTrackColor="#42A5F5"
+                            ThumbColor="#1976D2"
+                            ValueChanged="Sliders_ValueChanged" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="15" CornerRadius="15" BackgroundColor="White" HasShadow="True" BorderColor="#dddddd" Margin="0,10,0,0">
+                <VerticalStackLayout Spacing="15">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Boyunuz (CM):" Style="{StaticResource InputHeader}" Grid.Column="0"/>
+                        <Label x:Name="BoyLabel"
+                               Text="170 CM"
+                               TextColor="#1976D2"
+                               Grid.Column="1"
+                               FontSize="20" FontAttributes="Bold"/>
+                    </Grid>
+
+                    <Slider x:Name="BoySlider"
+                            Minimum="100"
+                            Maximum="250"
+                            Value="170"
+                            MinimumTrackColor="#42A5F5"
+                            ThumbColor="#1976D2"
+                            ValueChanged="Sliders_ValueChanged" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame x:Name="SonucFrame"
+                   Padding="30"
+                   CornerRadius="20"
+                   Margin="0,30,0,0"
+                   BackgroundColor="#E0F7FA" HasShadow="True">
+                <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+                    <Label Text="Vücut Kitle İndeksiniz (VKİ):"
+                           HorizontalOptions="Center"
+                           FontSize="18"
+                           TextColor="#01579B"/> <Label x:Name="VkiSonucLabel"
+                           Text="24.22"
+                           FontSize="60"
+                           FontAttributes="Bold"
+                           TextColor="#01579B"
+                           HorizontalOptions="Center" />
+
+                    <Label x:Name="VkiKategoriLabel"
+                           Text="Normal Kilolu"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#01579B"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

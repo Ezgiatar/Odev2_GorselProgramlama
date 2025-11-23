@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2_GorselProgramlama.MainPage"
+             Title="Ana Sayfa">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                Source="profile.jpeg" 
+                HeightRequest="180"
+                WidthRequest="180"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Profil resmim"/>
+
+            <Label
+                Text="Ezgi Atar"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Bartın Üniversitesi Bilgisayar Mühendisliği"
+                FontSize="18"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level2" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
